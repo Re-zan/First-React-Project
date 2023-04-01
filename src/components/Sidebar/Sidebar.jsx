@@ -12,11 +12,14 @@ const Sidebar = (props) => {
   }
 
   return (
-    <div className="card my-3 p-3 border-0">
+    <div className="card my-3 p-3 border-0 ">
       <div className="heading">
         <h2>Spent time on read :{totalTime} min </h2>
       </div>
-      <div className="card-body p-3 " style={{ backgroundColor: "#dee2e6" }}>
+      <div
+        className="card-body p-3 sticky-top"
+        style={{ backgroundColor: "#dee2e6" }}
+      >
         <h3 className="mt-3">Booked Mark items: {props.bookedmark.length} </h3>
         <p>
           {items.map((item) => (

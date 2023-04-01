@@ -14,12 +14,10 @@ const Mainbody = () => {
   }, []);
 
   const dataHnadaler = (data) => {
-    const quantiy = JSON.parse(localStorage.getItem(data.id));
-    if (quantiy) {
+    let existing = bookedmark.find((datas) => datas.id === data.id);
+    if (existing) {
       toast("Already Added");
     } else {
-      localStorage.setItem(data.id, 1);
-      console.log(quantiy);
       const newItems = [...bookedmark, data];
       setBookedmark(newItems);
     }
