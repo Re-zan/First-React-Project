@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import AllData from "../AllData/AllData";
+import Sidebar from "../Sidebar/Sidebar";
 
 const Mainbody = () => {
   const [datas, setDatas] = useState([]);
+  const [bookedmark, setBookedmark] = useState([]);
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -10,7 +12,8 @@ const Mainbody = () => {
   }, []);
 
   const dataHnadaler = (data) => {
-    console.log(data);
+    const newItems = [...bookedmark, data];
+    setBookedmark(newItems);
   };
   return (
     <div>
@@ -24,7 +27,9 @@ const Mainbody = () => {
             ></AllData>
           ))}
         </div>
-        <div className="col-sm-6 col-md-4">Column2</div>
+        <div className="col-sm-6 col-md-4">
+          <Sidebar bookedmark={bookedmark}></Sidebar>
+        </div>
       </div>
     </div>
   );
