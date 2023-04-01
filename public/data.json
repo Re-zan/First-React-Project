@@ -6,7 +6,7 @@
     "author_img": "https://api.dicebear.com/6.x/adventurer/svg?seed=Mariya",
     "author_name": "Mrs. Mariya",
     "date": "Mar 14(12 days ago)",
-    "reading_time": 5,
+    "reading_time": 15,
     "title": "Learn About React",
     "stage": {
       "level": "#mid-level",
@@ -20,7 +20,7 @@
     "author_img": "https://api.dicebear.com/6.x/adventurer/svg?seed=Sadia",
     "author_name": "Mrs. Sadia",
     "date": "Feb 24(12 days ago)",
-    "reading_time": 5,
+    "reading_time": 23,
     "title": "3D Animation",
     "stage": {
       "level": "#mid-level",
@@ -34,11 +34,11 @@
     "author_img": "https://api.dicebear.com/6.x/adventurer/svg?seed=Priya",
     "author_name": "Mrs. Priya",
     "date": "Feb 23(12 days ago)",
-    "reading_time": 5,
+    "reading_time": 17,
     "title": "Learing About API & ES6",
     "stage": {
       "level": "#mid-level",
-      "lang": "JavaScript"
+      "lang": "#JavaScript"
     }
   },
   {
@@ -48,11 +48,11 @@
     "author_img": "https://api.dicebear.com/6.x/adventurer/svg?seed=Rahi",
     "author_name": "Mrs. Rahi",
     "date": "Jun 24(12 days ago)",
-    "reading_time": 5,
+    "reading_time": 18,
     "title": "Learing About Basic Graphics",
     "stage": {
       "level": "#mid-level",
-      "lang": "Graphics"
+      "lang": "#Graphics"
     }
   }
 ]
