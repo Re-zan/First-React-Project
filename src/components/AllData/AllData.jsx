@@ -5,6 +5,7 @@ const AllData = (props) => {
   const { url, author_img, author_name, date, reading_time, title, stage } =
     props.data;
 
+  const dataHnadaler = props.dataHnadaler;
   return (
     <div className="card my-3 p-3">
       <img src={url} alt={author_name} className="rounded" />
@@ -16,7 +17,13 @@ const AllData = (props) => {
             <p className="text-secondary">{date}</p>
           </div>
         </div>
-        <h5 className="text-secondary">{reading_time} min read</h5>
+        <h5 className="text-secondary">
+          {reading_time} min read{" "}
+          <i
+            className="fa-regular fa-bookmark"
+            onClick={() => dataHnadaler(props.data)}
+          ></i>
+        </h5>
       </div>
       <div className="p-2">
         <h1 className="py-2">{title}</h1>

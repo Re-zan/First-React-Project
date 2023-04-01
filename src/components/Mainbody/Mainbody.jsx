@@ -8,12 +8,20 @@ const Mainbody = () => {
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
+
+  const dataHnadaler = (data) => {
+    console.log(data);
+  };
   return (
     <div>
       <div className="row">
         <div className="col-sm-6 col-md-8">
           {datas.map((data) => (
-            <AllData key={data.id} data={data}></AllData>
+            <AllData
+              key={data.id}
+              data={data}
+              dataHnadaler={dataHnadaler}
+            ></AllData>
           ))}
         </div>
         <div className="col-sm-6 col-md-4">Column2</div>
