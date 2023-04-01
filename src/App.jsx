@@ -1,4 +1,5 @@
 import "./App.css";
+import Blog from "./components/Blog/Blog";
 import Header from "./components/Header/Header";
 import Mainbody from "./components/Mainbody/Mainbody";
 import { ToastContainer, toast } from "react-toastify";
@@ -10,6 +11,7 @@ function App() {
       <Header></Header>
       <Mainbody></Mainbody>
       <ToastContainer></ToastContainer>
+      <Blog></Blog>
     </div>
   );
 }
