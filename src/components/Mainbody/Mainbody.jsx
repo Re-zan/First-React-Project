@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AllData from "../AllData/AllData";
 import Sidebar from "../Sidebar/Sidebar";
+import { ToastContainer, toast } from "react-toastify";
 
 const Mainbody = () => {
   const [datas, setDatas] = useState([]);
@@ -15,7 +16,7 @@ const Mainbody = () => {
   const dataHnadaler = (data) => {
     const quantiy = JSON.parse(localStorage.getItem(data.id));
     if (quantiy) {
-      alert("ache vai");
+      toast("Already Added");
     } else {
       localStorage.setItem(data.id, 1);
       console.log(quantiy);
