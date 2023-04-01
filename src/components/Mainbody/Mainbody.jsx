@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar/Sidebar";
 const Mainbody = () => {
   const [datas, setDatas] = useState([]);
   const [bookedmark, setBookedmark] = useState([]);
+  const [timetotal, setTimetotal] = useState([]);
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -15,6 +16,11 @@ const Mainbody = () => {
     const newItems = [...bookedmark, data];
     setBookedmark(newItems);
   };
+  const timeHandeler = (data) => {
+    const newTime = [...timetotal, data];
+    setTimetotal(newTime);
+  };
+
   return (
     <div>
       <div className="row">
@@ -24,11 +30,12 @@ const Mainbody = () => {
               key={data.id}
               data={data}
               dataHnadaler={dataHnadaler}
+              timeHandeler={timeHandeler}
             ></AllData>
           ))}
         </div>
         <div className="col-sm-6 col-md-4">
-          <Sidebar bookedmark={bookedmark}></Sidebar>
+          <Sidebar bookedmark={bookedmark} timetotal={timetotal}></Sidebar>
         </div>
       </div>
     </div>

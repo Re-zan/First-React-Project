@@ -6,6 +6,7 @@ const AllData = (props) => {
     props.data;
 
   const dataHnadaler = props.dataHnadaler;
+  const timeHandeler = props.timeHandeler;
   return (
     <div className="card my-3 p-3">
       <img src={url} alt={author_name} className="rounded" />
@@ -31,9 +32,9 @@ const AllData = (props) => {
           {stage.level} {stage.lang}
         </p>
       </div>
-      <a href="" className="design">
+      <p href="" className="design" onClick={() => timeHandeler(props.data)}>
         Mark as read
-      </a>
+      </p>
     </div>
   );
 };
