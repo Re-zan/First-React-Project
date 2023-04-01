@@ -13,8 +13,15 @@ const Mainbody = () => {
   }, []);
 
   const dataHnadaler = (data) => {
-    const newItems = [...bookedmark, data];
-    setBookedmark(newItems);
+    const quantiy = JSON.parse(localStorage.getItem(data.id));
+    if (quantiy) {
+      alert("ache vai");
+    } else {
+      localStorage.setItem(data.id, 1);
+      console.log(quantiy);
+      const newItems = [...bookedmark, data];
+      setBookedmark(newItems);
+    }
   };
   const timeHandeler = (data) => {
     const newTime = [...timetotal, data];
